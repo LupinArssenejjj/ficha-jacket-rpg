@@ -1,0 +1,8 @@
+{
+  "name": "Subject V - Dossier",
+  "description": "A retro-styled Hotline Miami character sheet with AI integration.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
