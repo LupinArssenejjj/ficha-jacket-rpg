@@ -9,7 +9,7 @@ const Header: React.FC = () => {
         <div className="relative group">
           <div className="w-16 h-16 rounded border-2 border-neon-cyan overflow-hidden shadow-[0_0_15px_#00FFFF] relative z-10 bg-black">
             <img 
-              src="https://picsum.photos/id/1005/200/200" 
+              src="/profile.png" 
               alt="J" 
               className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
             />
