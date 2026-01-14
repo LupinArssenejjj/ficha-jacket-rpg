@@ -46,7 +46,7 @@ export const MASKS: MaskData[] = [
     animal: 'O Galo',
     description: 'Foco: Tático e Preditivo. A projeção assume a forma de um Galo. A capacidade de processamento neural é acelerada drasticamente. "J" não se torna mais forte, mas ganha leitura de combate avançada. Ele consegue antecipar a trajetória de golpes inimigos, calcular ricochetes e encontrar rotas de ataque que passariam despercebidas por um soldado comum. É o modo padrão para tiroteios e controle de multidão.',
     stats: 'SYSTEM: PREDICTIVE_COMBAT_V1',
-    imageSrc: '/richard.png',
+    imageSrc: '/Richard.png',
     color: '#00FFFF' // Cyan
   },
   {
@@ -55,7 +55,7 @@ export const MASKS: MaskData[] = [
     animal: 'O Tigre',
     description: 'Foco: Força Bruta e Ki. A projeção se torna um Tigre. O dispositivo desliga os limitadores de segurança muscular e redireciona todo o fluxo de energia para os membros. Seus golpes desarmados tornam-se letais, capazes de amassar metal e quebrar ossos com um único soco. A desvantagem é que a destreza fina é perdida; ele não consegue usar armas de fogo ou operar máquinas complexas neste modo, tornando-se uma besta de combate corpo a corpo.',
     stats: 'SYSTEM: LIMITER_RELEASE_FULL',
-    imageSrc: '/tony.png',
+    imageSrc: '/Tony.png',
     color: '#FF003C' // Red
   },
   {
@@ -64,7 +64,7 @@ export const MASKS: MaskData[] = [
     animal: 'A Coruja',
     description: 'Foco: Reconhecimento e Espionagem. A projeção assume a forma de uma Coruja. A mana é desviada para os sensores ópticos e auditivos, expandindo a percepção sensorial. Ele pode ver assinaturas de calor, fluxo de mana através de paredes finas e ouvir conversas distantes. A desvantagem crítica é que sua defesa física e escudos caem drasticamente, pois a energia é toda consumida pelos sensores.',
     stats: 'SYSTEM: SENSORY_OVERDRIVE',
-    imageSrc: '/rasmus.png',
+    imageSrc: '/Rasmus.png',
     color: '#EAFF00' // Yellow
   }
 ];
