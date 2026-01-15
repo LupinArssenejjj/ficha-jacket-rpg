@@ -81,7 +81,7 @@ export const MISSION_RANKS: RankData[] = [
     description: "Missões que envolvem deslocamentos maiores, criaturas mais agressivas, bandidos iniciantes e dungeons superficiais.",
     risk: "Moderado",
     narratorType: "Pode ser feito por auto narração",
-    completed: 2, // <--- EDITAR AQUI (EDIT HERE)
+    completed: 4, // <--- EDITAR AQUI (EDIT HERE)
     required: 8,
     color: "#00FFFF" // Cyan
   },
