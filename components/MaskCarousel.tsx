@@ -46,15 +46,24 @@ const MaskCarousel: React.FC = () => {
                         src={mask.imageSrc} 
                         alt={mask.name} 
                         className="w-full h-full object-contain pixelated rendering-pixelated group-hover:brightness-125 transition-all"
-                        style={{ imageRendering: 'pixelated' }}
+                        style={{ 
+                            imageRendering: 'pixelated',
+                            // LOGICA DA SILHUETA AQUI:
+                            filter: mask.isLocked ? 'brightness(0) drop-shadow(0 0 1px rgba(255,255,255,0.5))' : 'none',
+                            opacity: mask.isLocked ? 0.7 : 1
+                        }}
                     />
                     
-                    {/* Glitch Overlay on Hover */}
-                    <div className="absolute inset-0 bg-neon-cyan/20 opacity-0 group-hover:opacity-100 mix-blend-overlay pointer-events-none transition-opacity duration-75" />
+                    {/* Glitch Overlay on Hover (Só aparece se não estiver bloqueada) */}
+                    {!mask.isLocked && (
+                        <div className="absolute inset-0 bg-neon-cyan/20 opacity-0 group-hover:opacity-100 mix-blend-overlay pointer-events-none transition-opacity duration-75" />
+                    )}
                     
                 </motion.div>
                 <div className="mt-2 text-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="font-retro text-[8px] bg-black px-1" style={{ color: mask.color }}>{mask.animal}</span>
+                    <span className="font-retro text-[8px] bg-black px-1" style={{ color: mask.isLocked ? '#555' : mask.color }}>
+                        {mask.isLocked ? '???' : mask.animal}
+                    </span>
                 </div>
              </motion.div>
           </div>
@@ -75,7 +84,10 @@ const MaskCarousel: React.FC = () => {
             <motion.div
               layoutId={`mask-container-${selectedMask.id}`}
               className="relative w-full max-w-md bg-black border-2 p-1 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]"
-              style={{ borderColor: selectedMask.color, boxShadow: `0 0 30px ${selectedMask.color}30` }}
+              style={{ 
+                  borderColor: selectedMask.isLocked ? '#333' : selectedMask.color, 
+                  boxShadow: selectedMask.isLocked ? 'none' : `0 0 30px ${selectedMask.color}30` 
+              }}
             >
               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-20 pointer-events-none"></div>
               
@@ -95,21 +107,28 @@ const MaskCarousel: React.FC = () => {
                             src={selectedMask.imageSrc} 
                             alt={selectedMask.name} 
                             className="w-full h-full object-contain pixelated relative z-10 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]"
-                            style={{ imageRendering: 'pixelated' }}
+                            style={{ 
+                                imageRendering: 'pixelated',
+                                // LOGICA DA SILHUETA NO MODAL TAMBÉM:
+                                filter: selectedMask.isLocked ? 'brightness(0) drop-shadow(0 0 2px rgba(255,255,255,0.5))' : 'none'
+                            }}
                         />
                     </div>
                     <div>
-                        <h3 className="font-retro text-2xl" style={{ color: selectedMask.color, textShadow: `0 0 10px ${selectedMask.color}` }}>
+                        <h3 className="font-retro text-2xl" style={{ 
+                            color: selectedMask.isLocked ? '#777' : selectedMask.color, 
+                            textShadow: selectedMask.isLocked ? 'none' : `0 0 10px ${selectedMask.color}` 
+                        }}>
                         {selectedMask.name}
                         </h3>
                         <p className="font-mono text-gray-400 text-xs mt-2 uppercase tracking-widest bg-white/5 inline-block px-2 py-1 rounded">
-                        PROTOCOL: {selectedMask.animal}
+                        PROTOCOL: {selectedMask.isLocked ? 'LOCKED' : selectedMask.animal}
                         </p>
                     </div>
                   </div>
 
                   <div className="w-full bg-gray-900/50 p-4 rounded border border-white/5 mb-4 relative overflow-hidden">
-                        <div className="absolute top-0 left-0 w-1 h-full shadow-[0_0_10px_currentColor]" style={{ backgroundColor: selectedMask.color }}></div>
+                        <div className="absolute top-0 left-0 w-1 h-full shadow-[0_0_10px_currentColor]" style={{ backgroundColor: selectedMask.isLocked ? '#333' : selectedMask.color }}></div>
                         <p className="font-mono text-gray-200 text-xs sm:text-sm leading-relaxed text-justify">
                             {selectedMask.description}
                         </p>
@@ -117,7 +136,7 @@ const MaskCarousel: React.FC = () => {
 
                   <div className="w-full flex justify-between items-center border-t border-white/10 pt-3">
                       <span className="font-retro text-[8px] text-gray-500">SYSTEM STATUS</span>
-                      <span className="font-mono text-[10px] animate-pulse" style={{ color: selectedMask.color }}>
+                      <span className="font-mono text-[10px] animate-pulse" style={{ color: selectedMask.isLocked ? '#555' : selectedMask.color }}>
                         {selectedMask.stats}
                       </span>
                   </div>
