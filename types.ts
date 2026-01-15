@@ -4,8 +4,9 @@ export interface MaskData {
   animal: string;
   description: string;
   stats: string;
-  imageSrc: string; // Placeholder for logic
+  imageSrc: string;
   color: string;
+  isLocked?: boolean; 
 }
 
 export enum Tab {
