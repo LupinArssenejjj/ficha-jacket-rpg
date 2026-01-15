@@ -66,8 +66,19 @@ export const MASKS: MaskData[] = [
     stats: 'SYSTEM: SENSORY_OVERDRIVE',
     imageSrc: '/Rasmus.png',
     color: '#EAFF00' // Yellow
+  },
+  {
+    id: 'jake',
+    name: 'JAKE',
+    animal: 'A Cobra',
+    description: 'Foco: Combate à Distância e Balística. O processador calcula ricochetes letais para arremessos e ativa eletroímãs para atrair as armas de volta à mão. Estabiliza mecanicamente o recuo de armas de fogo, dobrando alcance efetivo e precisão.',
+    stats: 'SYSTEM: LOCKED_//_REQUIRE_RANK_G', 
+    imageSrc: '/Jake.png', 
+    color: '#39FF14', 
+    isLocked: true 
   }
 ];
+
 
 // ==========================================
 // MISSION SYSTEM CONFIGURATION
