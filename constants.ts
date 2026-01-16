@@ -6,21 +6,21 @@ export const CHARACTER_INFO = {
   race: "Ciborgue",
   class: "Guerreiro Tático",
   subclass: "Especialista em CQC e Armas Improvisadas",
-  rank: "H",
+  rank: "G",
   age: "28 Anos",
-  affiliation: "Reino de Arcane (Setor de Inteligência)",
-  personality: `"J" é um indivíduo de poucas palavras e muita ação. Em serviço, ele opera com uma frieza mecânica, executando ordens brutais sem demonstrar prazer ou remorso, vendo a violência apenas como uma ferramenta de trabalho. Ele se comunica exclusivamente através de um gravador, o que cria uma barreira entre ele e o mundo. No entanto, sua lealdade a Arcane é inquestionável, acreditando que seu "trabalho sujo" é o que mantém a sociedade limpa e segura.`,
+  affiliation: "Operativo Autônomo (Ex-Setor de Inteligência)",
+  personality: `"J" é um indivíduo de poucas palavras e muita ação. Em serviço, ele opera com uma frieza mecânica, executando ordens brutais sem demonstrar prazer ou remorso, vendo a violência apenas como uma ferramenta de trabalho. Ele se comunica exclusivamente através de um gravador, o que cria uma barreira entre ele e o mundo. No entanto, sua lealdade à missão é absoluta, acreditando que seu "trabalho sujo" é o que mantém o caos sob controle.`,
   appearance: `Um homem de estatura média com constituição atlética. Ele veste uma jaqueta estilo "Letterman" em tons de marrom e creme (reforçada com trama balística), calça jeans e tênis brancos. O rosto é cansado, com olheiras visíveis e uma expressão neutra, quase sempre iluminado pela luz ciano fria das projeções holográficas quando em combate.`,
-  history: `Nos arquivos confidenciais de Cindral, o "Projeto Persona" foi a iniciativa militar mais ambiciosa do reino para criar o soldado perfeito. O objetivo era fragmentar a psique humana para isolar emoções e maximizar a eficiência de combate através de tecnologia rúnica. Dezenas de voluntários sucumbiram à loucura ou ao colapso de mana, incapazes de suportar as múltiplas personalidades de combate. "J" foi o único sucesso. Ele se tornou a sombra necessária de Arcane, o agente acionado para "limpar" ameaças às rotas comerciais que os Legionários Dourados não podem tocar.\n\nSua vida é um ciclo de violência sancionada pelo estado. Ele cumpre a missão, limpa a cena e desaparece. Mas quando o dispositivo neural desliga e a jaqueta tática é guardada, o soldado deixa de existir. Ele retorna para um apartamento pequeno e silencioso no subúrbio, onde a guerra secreta dá lugar à rotina mundana de um homem comum, comendo comida pronta e assistindo TV até o sono vir, aguardando o próximo chamado.`,
+  history: `Originalmente um tenente de forças especiais condecorado, "J" foi voluntário do "Projeto Persona", uma iniciativa militar ultra-secreta desenhada para criar o soldado perfeito. O objetivo era fragmentar a psique humana para isolar emoções e maximizar a eficiência de combate através de implantes cibernéticos experimentais. Enquanto dezenas de outros cobaias sucumbiram à loucura ou rejeição sistêmica, "J" foi o único sucesso estável.\n\nA nação que criou o projeto colapsou e desapareceu dos registros históricos, mas a arma que eles criaram permaneceu. Hoje, "J" atua como um mercenário de elite e "limpador", aceitando contratos que exijam precisão cirúrgica e brutalidade controlada. Sua vida é um ciclo de violência: ele cumpre a missão, limpa a cena e desaparece para seu apartamento silencioso no subúrbio, onde a máquina de matar dá lugar à rotina mundana de um homem comum, aguardando o próximo telefonema.`,
   personaSystem: `Instalado na base do crânio, este dispositivo experimental permite que "J" altere a frequência de sua Alma instantaneamente. Ao ativar um modo, o dispositivo projeta uma Máscara Holográfica de Luz Sólida sobre seu rosto. O sistema possui um bloqueio de segurança que libera novos protocolos (máscaras) conforme o usuário sobe de Rank e prova estabilidade mental.`,
   abilities: [
     {
-      title: "Fôlego Sintético (Rank H)",
-      description: "Seus pulmões e sistema cardiovascular foram reforçados com biotecnologia arcana. Ele possui uma estamina muito superior a de um humano comum, capaz de correr, lutar e operar em alta performance por períodos estendidos sem fadiga respiratória."
+      title: "Fôlego Sintético",
+      description: "Seus pulmões e sistema cardiovascular foram reforçados com biotecnologia militar. Ele possui uma estamina muito superior a de um humano comum, capaz de correr, lutar e operar em alta performance por períodos estendidos sem fadiga respiratória."
     },
     {
       title: "Interface Neural (Passiva)",
-      description: "Sua visão é sobreposta por um HUD tático alimentado por mana. Ele recebe dados constantes sobre trajetória balística, contagem de munição, status vital do próprio corpo e mini-mapa de terreno conhecido."
+      description: "Sua visão é sobreposta por um HUD tático. Ele recebe dados constantes sobre trajetória balística, contagem de munição, status vital do próprio corpo e mini-mapa de terreno conhecido."
     }
   ],
   weapons: [
@@ -30,7 +30,7 @@ export const CHARACTER_INFO = {
     },
     {
       name: "Pistola Silenciada",
-      description: "Uma arma de fogo compacta padrão das forças de Arcane, modificada para aceitar munição perfurante e operar com ruído mínimo."
+      description: "Uma arma de fogo compacta padrão militar, modificada para aceitar munição perfurante e operar com ruído mínimo."
     },
     {
       name: "O Gravador",
@@ -47,43 +47,36 @@ export const MASKS: MaskData[] = [
     description: 'Foco: Tático e Preditivo. A projeção assume a forma de um Galo. A capacidade de processamento neural é acelerada drasticamente. "J" não se torna mais forte, mas ganha leitura de combate avançada. Ele consegue antecipar a trajetória de golpes inimigos, calcular ricochetes e encontrar rotas de ataque que passariam despercebidas por um soldado comum. É o modo padrão para tiroteios e controle de multidão.',
     stats: 'SYSTEM: PREDICTIVE_COMBAT_V1',
     imageSrc: '/Richard.png',
-    color: '#00FFFF' // Cyan
+    color: '#00FFFF'
   },
   {
     id: 'tony',
     name: 'TONY',
     animal: 'O Tigre',
-    description: 'Foco: Força Bruta e Ki. A projeção se torna um Tigre. O dispositivo desliga os limitadores de segurança muscular e redireciona todo o fluxo de energia para os membros. Seus golpes desarmados tornam-se letais, capazes de amassar metal e quebrar ossos com um único soco. A desvantagem é que a destreza fina é perdida; ele não consegue usar armas de fogo ou operar máquinas complexas neste modo, tornando-se uma besta de combate corpo a corpo.',
+    description: 'Foco: Força Bruta e Adrenalina. A projeção se torna um Tigre. O dispositivo desliga os limitadores de segurança muscular e redireciona todo o fluxo de energia para os membros. Seus golpes desarmados tornam-se letais, capazes de amassar metal e quebrar ossos com um único soco. A desvantagem é que a destreza fina é perdida; ele não consegue usar armas de fogo ou operar máquinas complexas neste modo.',
     stats: 'SYSTEM: LIMITER_RELEASE_FULL',
     imageSrc: '/Tony.png',
-    color: '#FF003C' // Red
+    color: '#FF003C'
   },
   {
     id: 'rasmus',
     name: 'RASMUS',
     animal: 'A Coruja',
-    description: 'Foco: Reconhecimento e Espionagem. A projeção assume a forma de uma Coruja. A mana é desviada para os sensores ópticos e auditivos, expandindo a percepção sensorial. Ele pode ver assinaturas de calor, fluxo de mana através de paredes finas e ouvir conversas distantes. A desvantagem crítica é que sua defesa física e escudos caem drasticamente, pois a energia é toda consumida pelos sensores.',
+    description: 'Foco: Reconhecimento e Espionagem. A projeção assume a forma de uma Coruja. A energia é desviada para os sensores ópticos e auditivos, expandindo a percepção sensorial. Ele pode ver assinaturas de calor através de paredes finas e ouvir conversas distantes. A desvantagem crítica é que sua defesa física cai drasticamente, pois a energia é consumida pelos sensores.',
     stats: 'SYSTEM: SENSORY_OVERDRIVE',
     imageSrc: '/Rasmus.png',
-    color: '#EAFF00' // Yellow
+    color: '#EAFF00'
   },
   {
     id: 'jake',
     name: 'JAKE',
     animal: 'A Cobra',
-    description: 'Foco: Combate à Distância e Balística. O processador calcula ricochetes letais para arremessos e ativa eletroímãs para atrair as armas de volta à mão. Estabiliza mecanicamente o recuo de armas de fogo, dobrando alcance efetivo e precisão.',
-    stats: 'SYSTEM: LOCKED_//_REQUIRE_RANK_G', 
-    imageSrc: '/Jake.png', 
-    color: '#39FF14', 
-    isLocked: true 
+    description: 'Foco: Balística e Arremessos Táticos. Transforma J em um assassino cirúrgico. [Trajetória Letal]: Garante 100% de acerto em ricochetes geométricos. [Retorno Magnético]: Eletroímanes permitem chamar a arma arremessada de volta ou desarmar inimigos. [Balística Aprimorada]: Anula o recuo de armas de fogo, dando a uma pistola a precisão de um rifle sniper. Possui Visão Termal e pode carregar objetos com choque "Veneno".',
+    stats: 'SYSTEM: VECTOR_CALC_OPTIMIZED',
+    imageSrc: '/Jake.png',
+    color: '#39FF14'
   }
 ];
-
-
-// ==========================================
-// MISSION SYSTEM CONFIGURATION
-// EDIT THE 'completed' FIELD TO UPDATE PROGRESS
-// ==========================================
 
 export const MISSION_RANKS: RankData[] = [
   {
@@ -92,9 +85,9 @@ export const MISSION_RANKS: RankData[] = [
     description: "Missões que envolvem deslocamentos maiores, criaturas mais agressivas, bandidos iniciantes e dungeons superficiais.",
     risk: "Moderado",
     narratorType: "Pode ser feito por auto narração",
-    completed: 6, // <--- EDITAR AQUI (EDIT HERE)
+    completed: 8,
     required: 8,
-    color: "#00FFFF" // Cyan
+    color: "#00FFFF"
   },
   {
     rank: "G",
@@ -102,9 +95,9 @@ export const MISSION_RANKS: RankData[] = [
     description: "Começa a exigir preparo real, criaturas fortes, dungeons pequenas, áreas instáveis, ambientes corrompidos ou missões de captura.",
     risk: "Consistente",
     narratorType: "Pode ser feito por auto narração",
-    completed: 0, // <--- EDITAR AQUI (EDIT HERE)
+    completed: 0,
     required: 12,
-    color: "#00FFAA" // Cyan-Green
+    color: "#00FFAA"
   },
   {
     rank: "F",
@@ -112,9 +105,9 @@ export const MISSION_RANKS: RankData[] = [
     description: "Equilíbrio entre perigo e técnica, ameaças maiores, grupos organizados, anomalias arcanas, monstros pequenos porém ferozes.",
     risk: "Alto",
     narratorType: "Exige Narrador",
-    completed: 0, // <--- EDITAR AQUI (EDIT HERE)
+    completed: 0,
     required: 13,
-    color: "#00FF00" // Green
+    color: "#00FF00"
   },
   {
     rank: "E",
@@ -122,9 +115,9 @@ export const MISSION_RANKS: RankData[] = [
     description: "Missões que podem envolver risco real de morte, bestas grandes, dungeons médias, desvios mágicos, fenômenos naturais hostis.",
     risk: "Alto",
     narratorType: "Exige Narrador",
-    completed: 0, // <--- EDITAR AQUI (EDIT HERE)
+    completed: 0,
     required: 15,
-    color: "#AAFF00" // Lime
+    color: "#AAFF00"
   },
   {
     rank: "D",
@@ -132,9 +125,9 @@ export const MISSION_RANKS: RankData[] = [
     description: "Neste Rank, o mundo já mostra a verdadeira face, criaturas inteligentes, magia hostil, armadilhas elaboradas, conflitos militares menores.",
     risk: "Muito Alto",
     narratorType: "Exige Narrador",
-    completed: 0, // <--- EDITAR AQUI (EDIT HERE)
+    completed: 0,
     required: 17,
-    color: "#EAFF00" // Yellow
+    color: "#EAFF00"
   },
   {
     rank: "C",
@@ -142,9 +135,9 @@ export const MISSION_RANKS: RankData[] = [
     description: "Núcleo de aventureiros experientes, monstros de alto escalão, regiões instáveis, investigação de catástrofes, primeira exposição a entidades meta-arcanas.",
     risk: "Extremo a Morte",
     narratorType: "Exige Narrador",
-    completed: 0, // <--- EDITAR AQUI (EDIT HERE)
+    completed: 0,
     required: 12,
-    color: "#FFaa00" // Orange
+    color: "#FFaa00"
   },
   {
     rank: "B",
@@ -152,9 +145,9 @@ export const MISSION_RANKS: RankData[] = [
     description: "Requer técnica, maestria e preparo, bestas lendárias menores, cultos, operações militares, dungeons profundas e ameaças que desafiam grupos inteiros.",
     risk: "Letal",
     narratorType: "Exige Narrador",
-    completed: 0, // <--- EDITAR AQUI (EDIT HERE)
+    completed: 0,
     required: 7,
-    color: "#FF5500" // Dark Orange
+    color: "#FF5500"
   },
   {
     rank: "A",
@@ -162,9 +155,9 @@ export const MISSION_RANKS: RankData[] = [
     description: "O topo dos aventureiros comuns, ameaças continentais menores, monstros colossais, corrupções antigas, tecnologias perdidas e magia proibida.",
     risk: "Altíssimo e Mortal",
     narratorType: "Exige Narrador",
-    completed: 0, // <--- EDITAR AQUI (EDIT HERE)
+    completed: 0,
     required: 5,
-    color: "#FF0000" // Red
+    color: "#FF0000"
   },
   {
     rank: "A+",
@@ -172,9 +165,9 @@ export const MISSION_RANKS: RankData[] = [
     description: "Um extra pra provar seu valor, um catástrofe ou uma ameaça de nivel continental maior do que a normal, ameaças nem sempre são da terra...",
     risk: "Mortal",
     narratorType: "Exige Narrador",
-    completed: 0, // <--- EDITAR AQUI (EDIT HERE)
+    completed: 0,
     required: "Evento",
-    color: "#FF003C" // Neon Red
+    color: "#FF003C"
   },
   {
     rank: "S",
@@ -182,9 +175,9 @@ export const MISSION_RANKS: RankData[] = [
     description: "Reservado para elites e grupos lendários, ameaças que podem devastar cidades, calamidades arcanas, monstros mitológicos, incursões interdimensionais.",
     risk: "Absurdamente Mortal",
     narratorType: "Exige Narrador (Staff)",
-    completed: 0, // <--- EDITAR AQUI (EDIT HERE)
+    completed: 0,
     required: "Evento",
-    color: "#FF00FF" // Magenta
+    color: "#FF00FF"
   },
   {
     rank: "SS",
@@ -192,9 +185,9 @@ export const MISSION_RANKS: RankData[] = [
     description: "Apenas heróis lendários ou vilões equivalentes. Catástrofes que mudam eras, entidades superiores, ruínas, fusões de magia e tecnologia proibida.",
     risk: "Destruição em Massa",
     narratorType: "Exige Narrador + Supervisor",
-    completed: 0, // <--- EDITAR AQUI (EDIT HERE)
+    completed: 0,
     required: "Evento",
-    color: "#9900FF" // Purple
+    color: "#9900FF"
   },
   {
     rank: "SSS+",
@@ -202,9 +195,9 @@ export const MISSION_RANKS: RankData[] = [
     description: "A própria história tem seu desfecho. Guerras \"divinas\", Despertos Ancestrais, corrupções totais ou rupturas entre realidades.",
     risk: "Nível Extinção",
     narratorType: "Evento Staff Exclusivo",
-    completed: 0, // <--- EDITAR AQUI (EDIT HERE)
+    completed: 0,
     required: "Evento",
-    color: "#FFFFFF" // White
+    color: "#FFFFFF"
   }
 ];
 
